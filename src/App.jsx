@@ -1,17 +1,25 @@
-// src/App.jsx dosyasının yeni ve zenginleştirilmiş içeriği
+// src/App.jsx dosyasının yeni içeriği (Daha profesyonel)
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-100 font-sans">
+    <div className="min-h-screen bg-gray-50 font-sans">
       
-      {/* BAŞLIK (HEADER) BÖLÜMÜ - Arka Plan Yeşil olacak */}
-      <header className="bg-green-700 text-white p-4 shadow-xl">
+      {/* BAŞLIK (HEADER) BÖLÜMÜ - Arka Plan Yeşil, Logo Tarzı Başlık */}
+      <header className="bg-green-800 text-white p-4 shadow-2xl">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-bold">Erişilebilir & Temiz Enerji Portalı</h1>
+          <h1 className="text-3xl font-extrabold tracking-wider border-b-2 border-yellow-400 pb-1">GREENWAY ENERJİ</h1>
           <nav>
-            <a href="#tanim" className="mx-3 hover:text-green-200 transition duration-300">Tanım & Kapsam</a>
-            <a href="#epdk" className="mx-3 hover:text-green-200 transition duration-300">Yasal Çerçeve</a>
-            <a href="#guncel" className="mx-3 hover:text-green-200 transition duration-300">Gelecek Hedefleri</a>
+            <a href="#tanim" className="mx-3 hover:text-yellow-400 transition duration-300">Tanım</a>
+            <a href="#mevzuat" className="mx-3 hover:text-yellow-400 transition duration-300">Mevzuat</a>
+            <a href="#kaynaklar" className="mx-3 hover:text-yellow-400 transition duration-300">Kaynaklar</a>
+            <a 
+              href="https://www.epdk.gov.tr/Detay/Icerik/3-1114/yenilenebilir-enerji" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-5 px-4 py-2 bg-yellow-400 text-gray-800 rounded-full font-bold hover:bg-yellow-300 transition duration-300"
+            >
+              EPDK Resmi Kaynak
+            </a>
           </nav>
         </div>
       </header>
@@ -19,55 +27,60 @@ export default function App() {
       {/* ANA İÇERİK (MAIN) BÖLÜMÜ */}
       <main className="container mx-auto p-8">
         
-        {/* TANIM VE GİRİŞ (Arka plan beyaz) */}
-        <section id="tanim" className="bg-white p-8 rounded-xl shadow-lg mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-6 border-b-2 pb-2">Kapsamlı Tanım ve Önemi</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Erişilebilir ve Temiz Enerji (Sürdürülebilir Kalkınma Amacı 7), hem çevresel sürdürülebilirliği hem de sosyal eşitliği amaçlayan küresel bir hedeftir. Bu, herkesin düşük maliyetle, güvenilir ve modern enerji hizmetlerine erişimini sağlamayı ifade eder.
+        {/* TANIM VE KAPSAM - Göz alıcı giriş */}
+        <section id="tanim" className="bg-white p-12 rounded-xl shadow-lg mb-16 border-t-8 border-green-600">
+          <h2 className="text-4xl font-extrabold text-gray-800 mb-6">Sürdürülebilir Kalkınma ve Enerjiye Erişim</h2>
+          <p className="text-xl text-gray-700 leading-relaxed mb-4">
+            Erişilebilir ve Temiz Enerji, Birleşmiş Milletler Sürdürülebilir Kalkınma Amacı 7 (SDG 7) ile doğrudan ilişkilidir ve küresel enerji krizine bir çözümdür. Bu, herkes için güvenilir, sürdürülebilir ve modern enerjiye erişimi sağlamayı kapsar. 
           </p>
-          <p className="text-lg text-gray-700">
-            Enerjiye erişim, eğitim, sağlık ve ekonomik kalkınma gibi temel insan haklarının gerçekleştirilmesi için bir ön koşuldur. Temiz enerji kullanımı ise iklim krizini yavaşlatmanın temel yoludur.
+          <p className="text-lg text-green-700 font-semibold">
+            Unutmayın: Enerjiye erişim, sadece bir lüks değil, ekonomik kalkınma ve sosyal eşitliğin temel taşıdır.
           </p>
         </section>
 
-        {/* EPDK VE YASAL ÇERÇEVE (Kartlar) */}
-        <section id="epdk" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Yasal Çerçeve ve Düzenleyici Kurumlar (EPDK)</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* MEVZUAT VE EPDK BÖLÜMÜ */}
+        <section id="mevzuat" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center border-b-4 border-gray-300 pb-2">Yasal Çerçeve ve Düzenleyici Kurumlar</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             
-            {/* Kart 1: EPDK Rolü */}
-            <div className="bg-yellow-50 p-6 rounded-lg shadow-md border-l-4 border-yellow-600">
-              <h3 className="text-2xl font-bold text-yellow-700 mb-3">Enerji Piyasası Düzenleme Kurumu (EPDK)</h3>
+            {/* Kart 1: EPDK Detay */}
+            <div className="bg-white p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-green-400/50">
+              <h3 className="text-2xl font-bold text-green-700 mb-3 flex items-center">
+                <span className="text-3xl mr-3">⚖️</span> EPDK'nın Rolü
+              </h3>
               <p className="text-gray-700">
-                Türkiye'de enerji piyasasının şeffaf, rekabetçi ve istikrarlı bir şekilde işlemesini sağlamakla görevlidir. Temiz enerji alanındaki teşvik, lisanslama ve fiyatlandırma süreçlerini EPDK yönetir. 
+                EPDK (Enerji Piyasası Düzenleme Kurumu), Türkiye'deki elektrik, doğal gaz ve petrol piyasalarını düzenler. Kurum, yenilenebilir enerji alanında lisans verme, tarifeleri belirleme ve piyasayı denetleme görevlerini üstlenir. Bu düzenlemeler, yatırımların şeffaf ve güvenli bir ortamda yapılmasını sağlar.
               </p>
             </div>
             
-            {/* Kart 2: Temel Kanunlar */}
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-              <h3 className="text-2xl font-bold text-blue-700 mb-3">Yenilenebilir Enerji Kaynakları Kanunu</h3>
+            {/* Kart 2: Kanunlar */}
+            <div className="bg-white p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-green-400/50">
+              <h3 className="text-2xl font-bold text-green-700 mb-3 flex items-center">
+                <span className="text-3xl mr-3">📜</span> Yasal Destekler
+              </h3>
               <p className="text-gray-700">
-                Güneş, rüzgar, jeotermal gibi temiz enerji kaynaklarının kullanımını ve yaygınlaşmasını teşvik eden yasal zemini oluşturur. Bu kanun, yatırımcılara alım garantisi gibi destekler sunar.
+                5346 Sayılı Yenilenebilir Enerji Kaynakları Kanunu, temiz enerji üretimine teşvikler ve mekanizmalar sunar. Çatı üstü güneş enerjisi gibi lisanssız elektrik üretimi teşvikleri, bireysel kullanıcıların dahi temiz enerji üretimine katılmasına olanak tanır.
               </p>
             </div>
           </div>
         </section>
 
-        {/* GELECEK HEDEFLERİ */}
-        <section id="guncel" className="bg-green-100 p-8 rounded-xl shadow-inner">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-green-400 pb-2">Küresel ve Ulusal Temiz Enerji Hedefleri</h2>
-          <ul className="list-disc list-inside space-y-3 text-lg text-gray-700">
-            <li>**Küresel Hedef (SDG 7):** 2030 yılına kadar yenilenebilir enerjinin küresel enerji karışımındaki payını önemli ölçüde artırmak.</li>
-            <li>**Türkiye Hedefi:** Enerji tüketiminde yenilenebilir kaynakların payını artırmak ve enerji verimliliğini yükseltmek (Kaynak: Ulusal Enerji Planları).</li>
-            <li>**Odak Noktası:** Özellikle evsel ve ticari alanlarda çatı üstü güneş enerjisi (lisanssız elektrik üretimi) teşvikleri büyük önem taşımaktadır.</li>
+        {/* KAYNAK VE DETAY LİSTESİ */}
+        <section id="kaynaklar" className="bg-green-50 p-10 rounded-xl shadow-inner border-l-8 border-green-600">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Temel Enerji Kaynakları ve Hedefler</h2>
+          <ul className="list-disc list-inside space-y-3 text-lg text-gray-700 ml-4">
+            <li>**Güneş Enerjisi (Solar):** Türkiye'nin potansiyeli en yüksek kaynağıdır. Bireysel ve santral bazında büyük destekler bulunur.</li>
+            <li>**Rüzgar Enerjisi:** Karasal ve denizde kurulan türbinlerle önemli bir paya sahiptir. Özellikle Ege ve Marmara'da yoğundur.</li>
+            <li>**Küresel Hedef:** 2030 yılına kadar yenilenebilir enerjinin küresel enerji karışımındaki payını önemli ölçüde artırmak hedeflenmektedir.</li>
+            <li>**Ödev Notu:** Bu proje Web ve Mobil Tasarım Dersi ödevi için hazırlanmıştır.</li>
           </ul>
         </section>
         
       </main>
       
       {/* ALT BÖLÜM (FOOTER) */}
-      <footer className="bg-gray-800 text-white p-6 text-center mt-12">
-        <p className="text-sm">Web ve Mobil Tasarım Dersi Ödevi • Tüm hakları saklıdır. Erişilebilirliği Destekliyoruz.</p>
+      <footer className="bg-gray-800 text-white p-6 text-center mt-16">
+        <p className="text-sm">GREENWAY ENERJİ © 2025 | Tüm hakları saklıdır.</p>
       </footer>
     </div>
   );
