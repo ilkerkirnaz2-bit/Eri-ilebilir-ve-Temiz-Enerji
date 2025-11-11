@@ -1,4 +1,4 @@
-// vite.config.js (YENİ İÇERİK)
+// vite.config.js (SON KESİN KOD)
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -7,7 +7,7 @@ import autoprefixer from 'autoprefixer'
 
 export default defineConfig({
   plugins: [react()],
-  // Sadece build aşamasında postcss/tailwind'i çalıştırması için
+  // Tailwind CSS'in derlenmesi için gerekli postcss ayarları
   css: {
     postcss: {
       plugins: [
@@ -18,6 +18,12 @@ export default defineConfig({
   },
   base: '/', 
   build: {
+    // Vite'ın hangi dosyaları tarayacağını belirtme (Tailwind için kritik)
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+      },
+    },
     outDir: 'dist', 
   },
 })
