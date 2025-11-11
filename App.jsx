@@ -1,4 +1,4 @@
-export default function App() {
+export default function src/App() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       
