@@ -7,7 +7,7 @@ export default function App() {
       {/* BAŞLIK (HEADER) BÖLÜMÜ - Arka Plan Yeşil, Logo Tarzı Başlık */}
       <header className="bg-green-800 text-white p-4 shadow-2xl">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-extrabold tracking-wider border-b-2 border-yellow-400 pb-1">GREENWAY ENERJİ</h1>
+          <h1 className="text-3xl font-extrabold tracking-wider border-b-2 border-yellow-400 pb-1">KIRNAZ ENERJİ</h1>
           <nav>
             <a href="#tanim" className="mx-3 hover:text-yellow-400 transition duration-300">Tanım</a>
             <a href="#mevzuat" className="mx-3 hover:text-yellow-400 transition duration-300">Mevzuat</a>
